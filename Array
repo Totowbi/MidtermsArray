@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class MidtermAct {
+    public static void main (String[] Args) {
+        Scanner in = new Scanner(System.in);
+        
+        int num = 5;
+        int[] intnum = new int[num];
+        
+        System.out.println("=======================================================");
+        System.out.println("Sample Program by Mr. de Guzman Tobit");
+        System.out.println("=======================================================");
+        
+        System.out.println("Please input 5 Integer Numbers: ");
+        System.out.println("=======================================================");
+        
+        for (int i = 0; i < num; i++) {
+            System.out.print("Number #" + (i+1) + ": ");
+            intnum[i] = in.nextInt();
+        }
+        
+        
+        for (int ctr = 0; ctr < num; ctr++) {
+            for (int ictr = 0; ictr < num - 1; ictr++) {
+                
+                if (intnum[ictr] > intnum[ictr + 1]) {
+                    int temp = intnum[ictr];
+                    intnum[ictr] = intnum[ictr + 1];
+                    intnum[ictr + 1] = temp;
+                }
+            }
+        }
+        
+        System.out.println("=======================================================");
+        System.out.println("The Integer Values you inputted in Ascending Order are:");
+        System.out.println("=======================================================");
+        
+        for (int i = 0; i < num; i++) {
+            System.out.println(intnum[i]);
+  
+        }
+                  System.out.println("=======================================================");
+            System.out.println("THANK YOU FOR USING MY SAMPLE PROGRAM");
+            
+            in.close();
+    }
+}
